@@ -63,3 +63,11 @@
 .title:hover{
     color: #4e7203;
 }
+
+.text-justify{
+    text-align: justify;
+}
+
+.opacity{
+    background-color: transparent;
+}
