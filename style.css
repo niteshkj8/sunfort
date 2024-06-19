@@ -68,6 +68,8 @@
     text-align: justify;
 }
 
-.opacity{
-    background-color: transparent;
+.backgro{
+    background-color: #12343b;
+    background-color: rgb(255 255 255 / 0.3);
+    backdrop-filter: blur(10px);
 }
