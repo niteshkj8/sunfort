@@ -1,0 +1,75 @@
+.gradient-background {
+    background: linear-gradient(300deg, #ff4c68, #4e7203, #f58320);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  body{
+    font-family: "Poppins", sans-serif;
+    background-image: url(./images/backgroung.jpeg);
+    backdrop-filter: blur(2px);
+}
+.offer1{
+    background-image: url(./images/terlifort.jpeg);
+    
+}
+.offer2{
+    background-image: url(./images/hepamore.jpeg);
+}
+.nav-link:hover {
+        color: #4e7203;
+}
+.nav-item.home .nav-link {
+        background-color: #f58320; /* Changes text color of Home link to #2596be */
+}
+.nav-item{
+    font-weight: bolder;
+}
+
+#features{
+    background-color: white;
+}
+
+.orange{
+    background-color: #f58320;
+    border-color: #f58320;
+
+}
+.orange:hover{
+    background-color: #4e7203;
+    border-color: #4e7203;
+
+}
+.nav-link{
+    color: #272121;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.title:hover{
+    color: #4e7203;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.backgro{
+    background-color: #12343b;
+    background-color: rgb(255 255 255 / 0.3);
+    backdrop-filter: blur(10px);
+}
