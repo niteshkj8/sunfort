@@ -1,0 +1,97 @@
+.gradient-background {
+    background: linear-gradient(300deg, #ff4c68, #4e7203, #f58320);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  body{
+    font-family: "Poppins", sans-serif;
+    background-image: url(./images/backgroung.jpeg);
+    backdrop-filter: blur(2px);
+}
+.offer1{
+    background-image: url(./images/terlifort.jpeg);
+    
+}
+.offer2{
+    background-image: url(./images/hepamore.jpeg);
+}
+.nav-link:hover {
+        color: #4e7203;
+}
+.nav-item.home .nav-link {
+        background-color: #f58320; /* Changes text color of Home link to #2596be */
+}
+.nav-item{
+    font-weight: bolder;
+}
+
+#features{
+    background-color: white;
+}
+
+.orange{
+    background-color: #f58320;
+    border-color: #f58320;
+
+}
+.orange:hover{
+    background-color: #4e7203;
+    border-color: #4e7203;
+
+}
+.nav-link{
+    color: #272121;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.title:hover{
+    color: #4e7203;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.backgro{
+    background-color: #12343b;
+    background-color: rgb(255 255 255 / 0.3);
+    backdrop-filter: blur(10px);
+}
+.navbar-brand img {
+    border-radius: 50%; /* Make logo circular */
+    margin-right: 10px;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold; /* Custom brand color */
+}
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    margin-right: 15px; /* Custom link color */
+    transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover .navbar-brand:hover {
+    color: #4e7203; /* Link hover color */
+}
+.navbar-toggler {
+    border: none; /* Remove border */
+}
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28100%2C 100%2C 100%2C 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E'); /* Custom icon color */
+}

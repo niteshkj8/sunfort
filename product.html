@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunfort HealthCare</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <style>
+    .jumbotron {   
+        padding: 5rem;
+        text-align: center;
+        background-color: var(--bs-body-bg);
+        border-radius: .3rem;
+    }
+    .product-container {
+      display: flex;
+      flex-wrap: wrap; 
+      gap: 20px;
+      padding: 20px;
+      justify-content: space-between;
+    }
+  
+    .product-card {
+      width: calc(33.333% - 20px);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-top: 50px;
+      overflow: hidden;
+      background-color: #fff;
+      transition: transform 0.3s;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .product-card img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .product-info {
+      padding: 16px;
+      text-align: center;
+    }
+  
+    .product-title {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+  
+    .product-price {
+      font-size: 16px;
+      color: #333;
+      margin: 8px 0;
+    }
+  
+    .product-rating {
+      font-size: 14px;
+      color: #f39c12;
+      margin: 8px 0;
+    }
+  
+    .add-to-cart {
+      display: none;
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+  
+    .product-card:hover .add-to-cart {
+      display: block;
+    }
+  
+    .add-to-cart:hover {
+      background-color: #4e7203;
+    }
+
+    @media (max-width: 992px) {
+            .product-card {
+                flex: 1 1 calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .product-card {
+                flex: 1 1 calc(100% - 1rem);
+            }
+        }
+
+  </style>
+
+</head>
+
+<body>
+
+
+      <!-- Navbar -->
+      <section id="navbar" data-aos="fade-down">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <img src="./images/logo.png" width="60" height="60" alt="Logo">
+                    <span class="fs-4 title">Sunfort Healthcare</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto nav nav-pills">
+                        <li class="nav-item home"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Testimonials</a></li>
+                        <li class="nav-item"><a href="product.html" class="nav-link">Products</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <div class="my-5" data-aos="fade-up">
+          <div class="container py-5">
+            <div class="row align-items-center shadow-lg">
+              <div class="col-md-6">
+                <img src="./images/doctor.png" alt="Doctor" class="img-fluid ">
+              </div>
+              <div class="col-md-6">
+                <h1 class="text-body-emphasis">Our Mission</h1>
+                <p class="lead">
+                    At <code>Sunfort Health Care</code>, our mission is to improve global health outcomes by developing and providing high-quality pharmaceuticals products that meet the diverse needs of patients. We are committed to innovative research, ethical practices, and accessibility, ensuring that our products contribute significantly to the well-being of individuals and communities. Our focus is on addressing current healthcare challenges and pioneering solutions that make a lasting impact on people’s lives.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+    
+    
+    <!-- product -->
+
+<div class="container my-5" data-aos="fade-up">
+  <div class="p-5 text-center rounded-3 backgro shadow-lg">
+    <h1 class="text-body-emphasis">Branded Medical Supplies</h1>
+    <p class="lead">
+      Quality <code>Meds</code> worth each <code>Penny</code>
+    </p>
+    <div class="product-container">
+      <div class="product-card" data-aos="fade-up">
+        <img src="./images/meds/med-1.png" alt="Product Image">
+        <div class="product-info">
+          <h2 class="product-title">Terlifort</h2>
+          <p class="product-price">₹ 999</p>
+          <p class="product-rating">★★★★☆</p>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <img src="./images/meds/med-2.png" alt="Product Image">
+        <div class="product-info">
+          <h2 class="product-title">Hepamore</h2>
+          <p class="product-price">₹ 999</p>
+          <p class="product-rating">★★★★★</p>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <img src="./images/meds/med-3.png" alt="Product Image">
+        <div class="product-info">
+          <h2 class="product-title">Pcm - Fort</h2>
+          <p class="product-price">₹ 999</p>
+          <p class="product-rating">★★★☆☆</p>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <img src="./images/meds/med-4.png" alt="Product Image">
+        <div class="product-info">
+          <h2 class="product-title">Pentafort</h2>
+          <p class="product-price">₹ 999</p>
+          <p class="product-rating">★★★★☆</p>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <img src="./images/meds/med-5.png" alt="Product Image">
+        <div class="product-info">
+          <h2 class="product-title">HS - VIR</h2>
+          <p class="product-price">₹ 999</p>
+          <p class="product-rating">★★★★★</p>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <img src="./images/meds/med-6.png" alt="Product Image">
+        <div class="product-info">
+          <h2 class="product-title">Neotrol</h2>
+          <p class="product-price">₹ 999</p>
+          <p class="product-rating">★★★☆☆</p>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <img src="./images/meds/med-7.png" alt="Product Image">
+        <div class="product-info">
+          <h2 class="product-title">Rtsun</h2>
+          <p class="product-price">₹ 999</p>
+          <p class="product-rating">★★★☆☆</p>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <img src="./images/meds/med-8.png" alt="Product Image">
+        <div class="product-info">
+          <h2 class="product-title">Nexsun</h2>
+          <p class="product-price">₹ 999</p>
+          <p class="product-rating">★★★☆☆</p>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <img src="./images/meds/med-9.png" alt="Product Image">
+        <div class="product-info">
+          <h2 class="product-title">Safclav 1.2</h2>
+          <p class="product-price">₹ 999</p>
+          <p class="product-rating">★★★☆☆</p>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <img src="./images/meds/med-10.png" alt="Product Image">
+        <div class="product-info">
+          <h2 class="product-title">Safzone - Sb</h2>
+          <p class="product-price">₹ 999</p>
+          <p class="product-rating">★★★☆☆</p>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <img src="./images/meds/med-11.png" alt="Product Image">
+        <div class="product-info">
+          <h2 class="product-title">Azithrosun</h2>
+          <p class="product-price">₹ 999</p>
+          <p class="product-rating">★★★☆☆</p>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <img src="./images/meds/med-12.png" alt="Product Image">
+        <div class="product-info">
+          <h2 class="product-title">Clariguard</h2>
+          <p class="product-price">₹ 999</p>
+          <p class="product-rating">★★★☆☆</p>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- more product -->
+<div class="container my-5" data-aos="fade-up">
+    <div class="p-5 text-center rounded-3 shadow-lg backgro">
+        <h1 class="text-body-emphasis">More Featured Products</h1>
+
+        <div class="product-container">
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-1.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Aztree</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★☆</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-2.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Sunzidim - Tz</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★★</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-3.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Sunpred</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★★</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-4.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Vancofort - Cp</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★★</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-5.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Clindafort</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★☆</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-6.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Tigisun</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★★</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-7.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Doxyfort</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★★</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-8.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Merosun</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★★</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-9.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Cilafort</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★☆</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-10.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Actinox</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★★</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-11.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Tecofort</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★★</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-12.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Safnex</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★★</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-13.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Piperafort</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★☆</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-14.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Polygem</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★★</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-15.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Colyfort</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★★</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-16.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Casposun</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★★</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <img src="./images/meds/medn-17.png" alt="Product Image">
+                <div class="product-info">
+                    <h2 class="product-title">Zavimax</h2>
+                    <p class="product-price">₹ 999</p>
+                    <p class="product-rating">★★★★★</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    <!-- footer -->
+    <section id="footer" class="gradient-background" data-aos="fade-up">
+        <div class="container">
+            <footer class="py-5">
+              <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                  <h5>Section</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-body-secondary">About</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Testimonials</a></li>
+                    <li class="nav-item mb-2"><a href="product.html" class="nav-link p-0 text-body-secondary">Products</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact</a></li>
+                  </ul>
+                </div>
+          
+                <div class="col-6 col-md-2 mb-3">
+                  <h5>Address</h5>
+                  <p>301, Sanskriti C.H.S. Kashmira (East) <br>
+                    Thane-401107 (Maharashtra)</p>
+                  
+                </div>
+          
+                <div class="col-6 col-md-2 mb-3">
+                  <h5>Contact Number</h5>
+                  <p>+91 8356996437</p>
+                </div>
+          
+                <div class="col-md-5 offset-md-1 mb-3">
+                  <form>
+                    <h5>Subscribe to Us</h5>
+                    <p>Get personalized updates on our products</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                      <label for="newsletter1" class="visually-hidden">Email address</label>
+                      <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                      <button class="btn btn-primary orange" type="button">Subscribe</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+          
+              <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                  <a href="index.html" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <img src="./images/logo.png" width="60" height="60">
+                  </a>
+                  <span class="mb-3 mb-md-0 text-body-secondary">Copyright © 2024 Sunfort Healthcare India Pvt. Ltd</span>
+                </div>
+            
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                  <li class="ms-3"><a class="text-body-secondary" href="#"><img src="./images/twitter.png" alt="twitter" width="25" height="25"></a></li>
+                  <li class="ms-3"><a class="text-body-secondary" href="#"><img src="./images/instagram.png" alt="instagram" width="25" height="25"></a></li>
+                  <li class="ms-3"><a class="text-body-secondary" href="#"><img src="./images/facebook.png" alt="facebook" width="25" height="25"></a></li>
+                </ul>
+                </div>
+              </footer>
+            </footer>
+          </div>
+    </section>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGzOgGoI1K6fUU9K/ScQs3iwAiV+F0Q5NfF8ForYJJg89" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+        AOS.init();
+        </script>
+
+    </body>
+
+</html>
